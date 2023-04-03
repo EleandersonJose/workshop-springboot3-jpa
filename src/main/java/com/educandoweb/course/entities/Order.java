@@ -3,6 +3,7 @@ package com.educandoweb.course.entities;
 import java.io.Serializable;
 import java.time.Instant;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 import com.educandoweb.course.entities.enums.OrderStatus;
@@ -100,6 +101,14 @@ public class Order implements Serializable {
 	
 	public Set<OrderItem> getOrderItems() {
 		return items;
+	}
+	
+	public Double getTotal() {
+		double sum = 0.0;
+		for(OrderItem x: items) {
+			sum = sum + x.getSubTotal();
+		}
+		return sum;
 	}
 
 	@Override
