@@ -3,7 +3,6 @@ package com.educandoweb.course.entities;
 import java.io.Serializable;
 import java.time.Instant;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Set;
 
 import com.educandoweb.course.entities.enums.OrderStatus;
